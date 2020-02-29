@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.JunctionAdmin", appContext.getPackageName());
+        assertEquals("com.omada.junctionAdmin", appContext.getPackageName());
     }
 }
