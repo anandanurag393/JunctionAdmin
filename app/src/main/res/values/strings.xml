@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">JunctionAdmin</string>
     <string name="display_events">PENDING</string>
+    <string name="venues">NAB</string>
 </resources>

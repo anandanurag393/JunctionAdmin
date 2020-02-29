@@ -6,10 +6,137 @@
     tools:context=".BookingQueue">
     <FrameLayout
         android:id="@+id/calender_view"
+        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_margin="10dp"/>
+        android:layout_height="150dp"
+        android:layout_margin="2dp">
+        <CalendarView
+            android:id="@+id/calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:firstDayOfWeek="1"
+            />
+    </FrameLayout>
     <LinearLayout
+        android:id="@+id/date_container"
+        android:layout_below="@id/calender_view"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/year"
+            android:text="YEAR"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:background="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <EditText
+            android:id="@+id/year_text"
+            android:text="2020"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="90dp"/>
+        <TextView
+            android:id="@+id/month"
+            android:text="MONTH"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:background="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/month_text"
+            android:text="02"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="70dp"/>
+        <TextView
+            android:id="@+id/day"
+            android:text="DAY"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:background="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/day_text"
+            android:text="20"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="70dp"/>
+
+    </LinearLayout>
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_below="@id/date_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/day_container"
+        android:layout_below="@+id/time_picker"
+        android:layout_margin="5dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/from"
+            android:text="FROM"
+            android:padding="5dp"
+            android:background="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <EditText
+            android:id="@+id/from_time"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:width="200dp"/>
+        <TextView
+            android:id="@+id/to"
+            android:text="TO"
+            android:padding="5dp"
+            android:background="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <EditText
+            android:id="@+id/to_time"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:width="200dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/venue"
+        android:layout_below="@+id/day_container"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="100dp"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/venue_title"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:text="VENUE"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/venue_text"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:autofillHints="@string/display_events"
+            android:isScrollContainer="true"
+            android:maxHeight="100dp"
+            android:padding="5dp" />
+    </LinearLayout>
 </RelativeLayout>
