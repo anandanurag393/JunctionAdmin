@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height = "match_parent"
+    android:layout_width="match_parent">
+<RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".BookingQueue">
     <FrameLayout
         android:id="@+id/calender_view"
         android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="250dp"
         android:layout_margin="2dp">
         <CalendarView
             android:id="@+id/calender"
@@ -74,11 +77,11 @@
     <TimePicker
         android:id="@+id/time_picker"
         android:layout_below="@id/date_container"
-        android:layout_width="wrap_content"
+        android:layout_width="600dp"
         android:layout_height="wrap_content" />
     <LinearLayout
         android:id="@+id/day_container"
-        android:layout_below="@+id/time_picker"
+        android:layout_below="@id/time_picker"
         android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -88,7 +91,7 @@
             android:text="FROM"
             android:padding="5dp"
             android:background="@color/colorAccent"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="match_parent"/>
         <EditText
             android:id="@+id/from_time"
@@ -98,12 +101,21 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:width="200dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id = "@+id/day_container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/day_container"
+        android:layout_margin="5dp"
+        >
         <TextView
             android:id="@+id/to"
             android:text="TO"
             android:padding="5dp"
             android:background="@color/colorAccent"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="match_parent"/>
         <EditText
             android:id="@+id/to_time"
@@ -116,7 +128,7 @@
     </LinearLayout>
     <LinearLayout
         android:id="@+id/venue"
-        android:layout_below="@+id/day_container"
+        android:layout_below="@+id/day_container2"
         android:layout_width="match_parent"
         android:layout_margin="5dp"
         android:layout_height="100dp"
@@ -140,3 +152,4 @@
             android:padding="5dp" />
     </LinearLayout>
 </RelativeLayout>
+</ScrollView>

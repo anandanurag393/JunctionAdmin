@@ -1,4 +1,4 @@
-package com.example.JunctionAdmin;
+package com.omada.junctionAdmin;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.JunctionAdmin;
+package com.omada.JunctionAdmin;
 
 import android.content.Context;
 
